@@ -85,8 +85,14 @@
     <p>© <span id="current-year"></span> Hao Jin. Crafted with curiosity and stardust.</p>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js" integrity="sha256-7LBVuFxqC/uyv+6pvwP5oVKCP55azkhNirlyntZhyYg=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/examples/js/controls/OrbitControls.min.js" integrity="sha256-fBrlx7lLAkrad0wUJWZTbA4p/vZslH1vlS8GTUsLaZY=" crossorigin="anonymous"></script>
-  <script src="/js/starfield.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js" crossorigin="anonymous"></script>
+  <script type="module">
+    import { OrbitControls } from 'https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/controls/OrbitControls.js';
+
+    if (window.THREE) {
+      window.THREE.OrbitControls = OrbitControls;
+    }
+  </script>
+  <script defer src="/js/starfield.js"></script>
 </body>
 </html>
