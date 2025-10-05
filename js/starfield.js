@@ -1,8 +1,11 @@
+import * as THREE from 'three';
+import { OrbitControls } from 'https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/controls/OrbitControls.js';
+
 (function () {
   const canvas = document.getElementById('space-canvas');
   const heroSection = document.querySelector('.hero');
 
-  if (!canvas || !heroSection || typeof THREE === 'undefined' || typeof THREE.OrbitControls === 'undefined') {
+  if (!canvas || !heroSection) {
     return;
   }
 
@@ -19,7 +22,7 @@
   const camera = new THREE.PerspectiveCamera(60, 1, 0.1, 1000);
   camera.position.set(0, 18, 140);
 
-  const controls = new THREE.OrbitControls(camera, canvas);
+  const controls = new OrbitControls(camera, canvas);
   controls.enableDamping = true;
   controls.enablePan = true;
   controls.minDistance = 30;
