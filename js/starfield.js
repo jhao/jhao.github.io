@@ -77,14 +77,69 @@ import { OrbitControls } from 'https://cdn.jsdelivr.net/npm/three@0.160.0/exampl
   starGeometry.setAttribute('position', new THREE.BufferAttribute(starPositions, 3));
   starGeometry.setAttribute('color', new THREE.BufferAttribute(starColors, 3));
 
+  function createStarTexture() {
+    const size = 128;
+    const canvasStar = document.createElement('canvas');
+    canvasStar.width = size;
+    canvasStar.height = size;
+    const ctx = canvasStar.getContext('2d');
+
+    if (!ctx) {
+      return null;
+    }
+
+    const center = size / 2;
+    const outerRadius = size * 0.45;
+    const innerRadius = outerRadius * 0.45;
+
+    const glowGradient = ctx.createRadialGradient(center, center, 0, center, center, size * 0.5);
+    glowGradient.addColorStop(0, 'rgba(255, 255, 255, 0.9)');
+    glowGradient.addColorStop(0.35, 'rgba(255, 240, 210, 0.55)');
+    glowGradient.addColorStop(1, 'rgba(255, 210, 150, 0)');
+    ctx.fillStyle = glowGradient;
+    ctx.fillRect(0, 0, size, size);
+
+    const spikes = 8;
+    ctx.save();
+    ctx.translate(center, center);
+    ctx.beginPath();
+    for (let i = 0; i < spikes * 2; i += 1) {
+      const radius = i % 2 === 0 ? outerRadius : innerRadius;
+      const angle = (i * Math.PI) / spikes;
+      const x = Math.cos(angle) * radius;
+      const y = Math.sin(angle) * radius;
+      if (i === 0) {
+        ctx.moveTo(x, y);
+      } else {
+        ctx.lineTo(x, y);
+      }
+    }
+    ctx.closePath();
+    ctx.fillStyle = 'rgba(255, 250, 230, 0.95)';
+    ctx.shadowColor = 'rgba(255, 240, 200, 0.65)';
+    ctx.shadowBlur = size * 0.12;
+    ctx.fill();
+    ctx.restore();
+
+    return new THREE.CanvasTexture(canvasStar);
+  }
+
+  const starTexture = createStarTexture();
+
   const starMaterial = new THREE.PointsMaterial({
-    size: 1.35,
+    size: 1.6,
     vertexColors: true,
+    map: starTexture || undefined,
+    alphaMap: starTexture || undefined,
     blending: THREE.AdditiveBlending,
     transparent: true,
-    opacity: 0.85,
+    opacity: 0.92,
     depthWrite: false,
   });
+
+  if (starTexture) {
+    starTexture.needsUpdate = true;
+  }
 
   const starfield = new THREE.Points(starGeometry, starMaterial);
   scene.add(starfield);
