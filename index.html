@@ -17,16 +17,22 @@
   <header class="home-header">
     <div class="header-inner">
       <div class="brand">Hao Jin</div>
-      <nav class="home-nav" id="primary-navigation">
-        <a href="#top">Home</a>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="https://github.com/jhao" target="_blank" rel="noopener">GitHub</a>
-        <a href="mailto:hao.jin@live.cn">Contact</a>
-      </nav>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Toggle navigation">
-        <span></span>
-      </button>
+      <div class="header-controls">
+        <nav class="home-nav" id="primary-navigation">
+          <a href="#top" data-i18n="nav.home">Home</a>
+          <a href="#about" data-i18n="nav.about">About</a>
+          <a href="#projects" data-i18n="nav.projects">Projects</a>
+          <a href="https://github.com/jhao" target="_blank" rel="noopener" data-i18n="nav.github">GitHub</a>
+          <a href="mailto:hao.jin@live.cn" data-i18n="nav.contact">Contact</a>
+        </nav>
+        <div class="language-toggle" role="group" aria-label="Select language" data-i18n-attr="aria-label:language.label">
+          <button type="button" class="language-button is-active" data-set-language="en" data-i18n="language.english">EN</button>
+          <button type="button" class="language-button" data-set-language="zh" data-i18n="language.chinese">中文</button>
+        </div>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Toggle navigation" data-i18n-attr="aria-label:nav.toggle">
+          <span></span>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -34,12 +40,12 @@
     <section class="hero" id="top">
       <canvas id="space-canvas" aria-hidden="true"></canvas>
       <div class="hero-overlay">
-        <p class="tagline">Exploring ideas in code, design, and data</p>
-        <h1>Welcome to My Constellation</h1>
-        <p class="lead">Take a tour through a living star map inspired by Ursa Major and discover the projects and passions that guide my work.</p>
-        <a class="cta" href="#about">Discover more</a>
+        <p class="tagline" data-i18n="hero.tagline">Exploring ideas in code, design, and data</p>
+        <h1 data-i18n="hero.title">Welcome to My Constellation</h1>
+        <p class="lead" data-i18n="hero.lead">Take a tour through a living star map inspired by Ursa Major and discover the projects and passions that guide my work.</p>
+        <a class="cta" href="#about" data-i18n="hero.cta">Discover more</a>
       </div>
-      <button class="scroll-indicator" type="button" data-scroll-to="#about" aria-label="Scroll to about section">
+      <button class="scroll-indicator" type="button" data-scroll-to="#about" aria-label="Scroll to about section" data-i18n-attr="aria-label:hero.scroll">
         <span></span>
       </button>
     </section>
@@ -47,39 +53,39 @@
     <section class="profile" id="about">
       <div class="profile-wrapper">
         <div class="profile-intro">
-          <h2>About Hao</h2>
-          <p>
+          <h2 data-i18n="about.title">About Hao</h2>
+          <p data-i18n="about.paragraph1">
             I’m a builder who loves transforming complex ideas into delightful digital experiences. From backend services to interactive data
             visualizations, I enjoy navigating the entire stack and delivering work that feels both meaningful and elegant.
           </p>
-          <p>
+          <p data-i18n="about.paragraph2">
             When I’m not experimenting with new technologies, you can find me capturing the night sky through astrophotography or exploring the
             latest trends in human–computer interaction.
           </p>
         </div>
         <div class="info-grid">
           <div class="info-card">
-            <h3>Current Focus</h3>
+            <h3 data-i18n="info.focus.title">Current Focus</h3>
             <ul>
-              <li>Building resilient systems with Go &amp; Python</li>
-              <li>Crafting immersive data products</li>
-              <li>Designing human-centered developer tooling</li>
+              <li data-i18n="info.focus.item1">Building resilient systems with Go &amp; Python</li>
+              <li data-i18n="info.focus.item2">Crafting immersive data products</li>
+              <li data-i18n="info.focus.item3">Designing human-centered developer tooling</li>
             </ul>
           </div>
           <div class="info-card">
-            <h3>Selected Work</h3>
+            <h3 data-i18n="info.work.title">Selected Work</h3>
             <ul>
-              <li><a href="https://github.com/jhao">Open-source contributions on GitHub</a></li>
-              <li>Real-time monitoring dashboards</li>
-              <li>Interactive storytelling experiments</li>
+              <li><a href="https://github.com/jhao" data-i18n="info.work.item1">Open-source contributions on GitHub</a></li>
+              <li data-i18n="info.work.item2">Real-time monitoring dashboards</li>
+              <li data-i18n="info.work.item3">Interactive storytelling experiments</li>
             </ul>
           </div>
           <div class="info-card">
-            <h3>Let’s Connect</h3>
+            <h3 data-i18n="info.connect.title">Let’s Connect</h3>
             <ul>
-              <li><a href="mailto:hao.jin@live.cn">hao.jin@live.cn</a></li>
-              <li><a href="https://twitter.com/haojinhj">@haojinhj on Twitter</a></li>
-              <li><a href="https://www.haoj.in">www.haoj.in</a></li>
+              <li><a href="mailto:hao.jin@live.cn" data-i18n="info.connect.item1">hao.jin@live.cn</a></li>
+              <li><a href="https://twitter.com/haojinhj" data-i18n="info.connect.item2">@haojinhj on Twitter</a></li>
+              <li><a href="https://www.haoj.in" data-i18n="info.connect.item3">www.haoj.in</a></li>
             </ul>
           </div>
         </div>
@@ -89,25 +95,25 @@
     <section class="projects" id="projects">
       <div class="projects-wrapper">
         <div class="section-header">
-          <p class="eyebrow">Projects</p>
-          <h2>Explore My Recent Work</h2>
-          <p class="description">A snapshot of experiments, tools, and platforms I’m building to make product thinking, automation, and storytelling more tangible.</p>
+          <p class="eyebrow" data-i18n="projects.eyebrow">Projects</p>
+          <h2 data-i18n="projects.title">Explore My Recent Work</h2>
+          <p class="description" data-i18n="projects.description">A snapshot of experiments, tools, and platforms I’m building to make product thinking, automation, and storytelling more tangible.</p>
         </div>
         <div class="projects-grid">
           <article class="project-card">
             <div class="project-content">
               <h3>PM Universe</h3>
-              <p>A constellation of product management resources that visualizes frameworks, case studies, and tactics for easier exploration.</p>
+              <p data-i18n="projects.pmUniverse.description">A constellation of product management resources that visualizes frameworks, case studies, and tactics for easier exploration.</p>
             </div>
             <div class="project-links">
               <a href="https://github.com/jhao/pm-universe" target="_blank" rel="noopener">GitHub</a>
-              <a href="https://haoj.in/pm-universe" target="_blank" rel="noopener">Demo</a>
+              <a href="https://haoj.in/pm-universe" target="_blank" rel="noopener" data-i18n="projects.pmUniverse.demo">Demo</a>
             </div>
           </article>
           <article class="project-card">
             <div class="project-content">
               <h3>SignX</h3>
-              <p>A minimalist e-signature workflow focused on privacy, speed, and clarity for teams that need agreements without the friction.</p>
+              <p data-i18n="projects.signx.description">A minimalist e-signature workflow focused on privacy, speed, and clarity for teams that need agreements without the friction.</p>
             </div>
             <div class="project-links">
               <a href="https://github.com/jhao/SignX" target="_blank" rel="noopener">GitHub</a>
@@ -116,7 +122,7 @@
           <article class="project-card">
             <div class="project-content">
               <h3>Local Bookshelf</h3>
-              <p>A personal knowledge library that syncs local reading notes with the cloud while keeping discovery fast and delightful.</p>
+              <p data-i18n="projects.localBookshelf.description">A personal knowledge library that syncs local reading notes with the cloud while keeping discovery fast and delightful.</p>
             </div>
             <div class="project-links">
               <a href="https://github.com/jhao/local-bookshelf" target="_blank" rel="noopener">GitHub</a>
@@ -125,7 +131,7 @@
           <article class="project-card">
             <div class="project-content">
               <h3>Policy Monitor</h3>
-              <p>Automated policy tracking that watches regulatory updates and surfaces alerts tailored to the teams who need to react.</p>
+              <p data-i18n="projects.policyMonitor.description">Automated policy tracking that watches regulatory updates and surfaces alerts tailored to the teams who need to react.</p>
             </div>
             <div class="project-links">
               <a href="https://github.com/jhao/policy_monitor" target="_blank" rel="noopener">GitHub</a>
@@ -134,7 +140,7 @@
           <article class="project-card">
             <div class="project-content">
               <h3>Evaluation System</h3>
-              <p>A scoring and reporting engine that simplifies performance reviews with transparent rubrics and actionable insights.</p>
+              <p data-i18n="projects.evaluationSystem.description">A scoring and reporting engine that simplifies performance reviews with transparent rubrics and actionable insights.</p>
             </div>
             <div class="project-links">
               <a href="https://github.com/jhao/evaluation-system" target="_blank" rel="noopener">GitHub</a>
@@ -143,7 +149,7 @@
           <article class="project-card">
             <div class="project-content">
               <h3>Mermaid Editor</h3>
-              <p>An interactive editor for crafting Mermaid diagrams with instant previews and sharing-friendly exports.</p>
+              <p data-i18n="projects.mermaidEditor.description">An interactive editor for crafting Mermaid diagrams with instant previews and sharing-friendly exports.</p>
             </div>
             <div class="project-links">
               <a href="https://github.com/jhao/mermaid-editor" target="_blank" rel="noopener">GitHub</a>
@@ -156,35 +162,35 @@
     <section class="playground" id="playground">
       <div class="playground-wrapper">
         <div class="section-header">
-          <p class="eyebrow">Playground</p>
-          <h2>互动体验</h2>
-          <p class="description">两个纯前端的小宇宙，欢迎点击进入体验它们的节奏与情绪。</p>
+          <p class="eyebrow" data-i18n="playground.eyebrow">Playground</p>
+          <h2 data-i18n="playground.title">Interactive Experiences</h2>
+          <p class="description" data-i18n="playground.description">两个纯前端的小宇宙，欢迎点击进入体验它们的节奏与情绪。</p>
         </div>
-        <div class="playground-grid">
-          <article class="playground-card">
+        <div class="playground-grid" role="list">
+          <article class="playground-card" role="listitem">
             <div class="playground-header">
               <span class="playground-icon" aria-hidden="true">🪐</span>
               <div class="playground-meta">
-                <p class="playground-subtitle">沉浸式街机</p>
-                <h3>Cosmic Pong</h3>
+                <p class="playground-subtitle" data-i18n="playground.cosmic.subtitle">Casual Ping Pong Arcade</p>
+                <h3 data-i18n="playground.cosmic.title">Cosmic Pong</h3>
               </div>
             </div>
             <div class="playground-content">
-              <p>复古的乒乓球玩法与太空视觉结合，节奏逐渐升级，和 AI 对手比拼反应力。</p>
-              <a class="playground-link" href="https://haoj.in/Cosmic-Pong/" target="_blank" rel="noopener">前往体验</a>
+              <p data-i18n="playground.cosmic.description">复古的乒乓球玩法与太空视觉结合，节奏逐渐升级，和 AI 对手比拼反应力。</p>
+              <a class="playground-link" href="https://haoj.in/Cosmic-Pong/" target="_blank" rel="noopener" data-i18n="playground.cosmic.link">前往体验</a>
             </div>
           </article>
-          <article class="playground-card">
+          <article class="playground-card" role="listitem">
             <div class="playground-header">
               <span class="playground-icon" aria-hidden="true">🌳</span>
               <div class="playground-meta">
-                <p class="playground-subtitle">情绪手帐</p>
-                <h3>树洞之树</h3>
+                <p class="playground-subtitle" data-i18n="playground.tree.subtitle">Emotion Journal</p>
+                <h3 data-i18n="playground.tree.title">树洞之树</h3>
               </div>
             </div>
             <div class="playground-content">
-              <p>挑选一棵树洞，写下心声，与记录对话的界面共同沉淀一份专属于你的私密空间。</p>
-              <a class="playground-link" href="https://haoj.in/tree-hole/" target="_blank" rel="noopener">走进树洞</a>
+              <p data-i18n="playground.tree.description">挑选一棵树洞，写下心声，与记录对话的界面共同沉淀一份专属于你的私密空间。</p>
+              <a class="playground-link" href="https://haoj.in/tree-hole/" target="_blank" rel="noopener" data-i18n="playground.tree.link">走进树洞</a>
             </div>
           </article>
         </div>
@@ -193,7 +199,7 @@
   </main>
 
   <footer class="home-footer">
-    <p>© <span id="current-year"></span> Hao Jin. Crafted with curiosity and stardust.</p>
+    <p data-i18n="footer.note" data-i18n-html="true">© <span id="current-year"></span> Hao Jin. Crafted with curiosity and stardust.</p>
   </footer>
 
   <script type="importmap">

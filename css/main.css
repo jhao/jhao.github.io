@@ -509,8 +509,18 @@ body.home-page a:focus {
   color: #ffffff;
 }
 
+.home-header .header-controls {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
+  flex: 1 1 auto;
+  position: relative;
+}
+
 .home-nav {
   display: flex;
+  align-items: center;
   gap: 24px;
   font-size: 0.95rem;
   z-index: 6;
@@ -519,6 +529,49 @@ body.home-page a:focus {
 .home-nav a {
   font-weight: 500;
   letter-spacing: 0.04em;
+}
+
+.language-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px;
+  border-radius: 999px;
+  border: 1px solid rgba(120, 147, 255, 0.25);
+  background: rgba(4, 6, 18, 0.65);
+  box-shadow: 0 12px 24px rgba(6, 10, 31, 0.28);
+  backdrop-filter: blur(6px);
+  flex-shrink: 0;
+}
+
+.language-button {
+  border: none;
+  background: transparent;
+  color: rgba(214, 223, 255, 0.86);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.language-button:hover,
+.language-button:focus {
+  color: #ffffff;
+}
+
+.language-button:focus-visible {
+  outline: 2px solid rgba(197, 210, 255, 0.6);
+  outline-offset: 2px;
+}
+
+.language-button.is-active {
+  background: linear-gradient(135deg, rgba(98, 123, 255, 0.9), rgba(155, 185, 255, 0.9));
+  color: #050813;
+  box-shadow: 0 10px 20px rgba(6, 10, 31, 0.35);
 }
 
 .nav-toggle {
@@ -946,12 +999,13 @@ body.home-page a:focus {
 
 .playground-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 32px;
 }
 
 .playground-card {
   display: grid;
+  grid-template-rows: auto 1fr;
   gap: 22px;
   background: rgba(9, 13, 38, 0.85);
   border: 1px solid rgba(120, 147, 255, 0.16);
@@ -1007,7 +1061,7 @@ body.home-page a:focus {
 
 .playground-content {
   display: grid;
-  gap: 16px;
+  gap: 20px;
 }
 
 .playground-content p {
@@ -1059,6 +1113,10 @@ body.home-page a:focus {
     gap: 24px;
   }
 
+  .home-header .header-controls {
+    gap: 16px;
+  }
+
   .home-nav {
     gap: 18px;
     font-size: 0.9rem;
@@ -1090,6 +1148,15 @@ body.home-page a:focus {
     flex-wrap: wrap;
     align-items: center;
     gap: 12px;
+  }
+
+  .home-header .header-controls {
+    width: 100%;
+    gap: 12px;
+  }
+
+  .language-toggle {
+    order: 2;
   }
 
   .home-header .nav-toggle {
