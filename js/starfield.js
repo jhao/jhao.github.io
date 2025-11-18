@@ -24,6 +24,7 @@ import { OrbitControls } from 'https://cdn.jsdelivr.net/npm/three@0.160.0/exampl
 
   const controls = new OrbitControls(camera, canvas);
   controls.enableDamping = true;
+  controls.enableZoom = false;
   controls.enablePan = true;
   controls.minDistance = 30;
   controls.maxDistance = 260;
