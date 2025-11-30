@@ -114,6 +114,27 @@
       'playground.tree.description':
         'Choose a hollow in the tree, pour out your thoughts, and let a reflective interface guard your private space.',
       'playground.tree.link': 'Enter the grove',
+      'playground.hotel.subtitle': 'Hotel Management',
+      'playground.hotel.title': 'Hotel Manager',
+      'playground.hotel.description':
+        'A streamlined hotel console covering booking, check-in, and billing with quick visibility into room status.',
+      'playground.hotel.link': 'Open console',
+      'playground.health.subtitle': 'Health Self-Check',
+      'playground.health.title': 'Health Checkup',
+      'playground.health.description':
+        'Enter your metrics to generate instant assessments and compare insights from two calculation models.',
+      'playground.health.link1': 'Try version 1',
+      'playground.health.link2': 'Try version 2',
+      'playground.library.subtitle': 'School Library',
+      'playground.library.title': 'Library Hub',
+      'playground.library.description':
+        'Simulated campus library circulation with search, borrowing, and inventory (demo: test/test123).',
+      'playground.library.link': 'Access system',
+      'playground.finance.subtitle': 'EPC Finance',
+      'playground.finance.title': 'Project Finance',
+      'playground.finance.description':
+        'Track cash flow and contract finances for EPC projects with clarity on efficiency and transparency.',
+      'playground.finance.link': 'View flows',
       'footer.note': '© {{year}} Hao Jin. Crafted with curiosity and stardust.'
     },
     zh: {
@@ -170,6 +191,23 @@
       'playground.tree.title': '树洞之树',
       'playground.tree.description': '挑选一处树洞写下心声，与对话式的界面一起沉淀专属于你的私密空间。',
       'playground.tree.link': '走进树洞',
+      'playground.hotel.subtitle': '酒店管理系统',
+      'playground.hotel.title': 'Hotel Manager',
+      'playground.hotel.description': '覆盖预订、入住、账单的酒店管理体验，快速浏览房态与订单。',
+      'playground.hotel.link': '前往管理',
+      'playground.health.subtitle': '身体健康自测',
+      'playground.health.title': 'Health Checkup',
+      'playground.health.description': '输入健康指标，即时生成评估报告，比较两个模型得出的不同建议。',
+      'playground.health.link1': '体验版本一',
+      'playground.health.link2': '体验版本二',
+      'playground.library.subtitle': '学校图书管理',
+      'playground.library.title': 'Library Hub',
+      'playground.library.description': '模拟校园图书流转，支持查询、借阅与库存管理（demo 账号：test/test123）。',
+      'playground.library.link': '进入系统',
+      'playground.finance.subtitle': '工程总包财务',
+      'playground.finance.title': 'Project Finance',
+      'playground.finance.description': '面向工程总包的收支流转与合同财务跟踪，聚焦资金效率与透明度。',
+      'playground.finance.link': '查看流转',
       'footer.note': '© {{year}} Hao Jin。以好奇与星尘打造。'
     }
   };
