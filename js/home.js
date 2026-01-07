@@ -54,7 +54,7 @@
     en: {
       'nav.home': 'Home',
       'nav.about': 'About',
-      'nav.projects': 'Projects',
+      'nav.projects': 'Works',
       'nav.github': 'GitHub',
       'nav.contact': 'Contact',
       'nav.toggle': 'Toggle navigation',
@@ -144,7 +144,7 @@
     zh: {
       'nav.home': '首页',
       'nav.about': '关于',
-      'nav.projects': '项目',
+      'nav.projects': '作品',
       'nav.github': 'GitHub',
       'nav.contact': '联系',
       'nav.toggle': '切换导航',
