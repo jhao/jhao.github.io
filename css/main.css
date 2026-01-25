@@ -898,6 +898,34 @@ body.home-page a:focus {
   gap: 28px;
 }
 
+.projects-columns {
+  display: grid;
+  gap: 56px;
+}
+
+.projects-column {
+  display: grid;
+  gap: 24px;
+}
+
+.projects-column-header {
+  display: grid;
+  gap: 10px;
+}
+
+.projects-column-header h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #f5f7ff;
+  margin: 0;
+}
+
+.projects-column-header p {
+  margin: 0;
+  font-size: 1rem;
+  color: rgba(222, 231, 255, 0.75);
+}
+
 .project-card {
   position: relative;
   background: rgba(9, 13, 38, 0.82);
@@ -1070,9 +1098,14 @@ body.home-page a:focus {
   color: rgba(214, 223, 255, 0.82);
 }
 
+.playground-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
 .playground-link {
   justify-self: flex-start;
-  margin-top: 6px;
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -1092,6 +1125,54 @@ body.home-page a:focus {
   color: #050813;
   background: linear-gradient(135deg, #7a9aff 0%, #a3b7ff 100%);
   border-color: transparent;
+}
+
+.publications {
+  position: relative;
+  padding: 120px 8vw;
+  background: radial-gradient(circle at 10% 20%, rgba(82, 112, 224, 0.18), transparent 45%),
+    radial-gradient(circle at 85% 70%, rgba(107, 76, 215, 0.12), transparent 55%),
+    rgba(4, 6, 18, 0.96);
+}
+
+.publications-wrapper {
+  max-width: 980px;
+  margin: 0 auto;
+  display: grid;
+  gap: 40px;
+}
+
+.publication-card {
+  display: grid;
+  gap: 24px;
+  padding: 36px;
+  border-radius: 24px;
+  background: rgba(9, 13, 38, 0.82);
+  border: 1px solid rgba(120, 147, 255, 0.16);
+  box-shadow: 0 24px 50px rgba(6, 10, 31, 0.4);
+}
+
+.publication-content {
+  display: grid;
+  gap: 12px;
+  color: rgba(214, 223, 255, 0.85);
+}
+
+.publication-content h3 {
+  margin: 0;
+  font-size: 1.6rem;
+  color: #f5f7ff;
+}
+
+.publication-content p {
+  margin: 0;
+  line-height: 1.8;
+}
+
+.publication-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
 .home-footer {

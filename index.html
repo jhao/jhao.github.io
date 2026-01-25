@@ -152,219 +152,261 @@
           <h2 data-i18n="projects.title">Explore My Recent Work</h2>
           <p class="description" data-i18n="projects.description">A snapshot of experiments, tools, and platforms I’m building to make product thinking, automation, and storytelling more tangible.</p>
         </div>
-        <div class="projects-grid">
-          <article class="project-card">
-            <div class="project-content">
-              <h3>PM Universe</h3>
-              <p data-i18n="projects.pmUniverse.description">A constellation of product management resources that visualizes frameworks, case studies, and tactics for easier exploration.</p>
+        <div class="projects-columns">
+          <div class="projects-column">
+            <div class="projects-column-header">
+              <h3 data-i18n="projects.column.products">Platforms &amp; Products</h3>
+              <p data-i18n="projects.column.products.description">核心产品与系统能力的集锦，从流程型平台到可视化体验。</p>
             </div>
-            <div class="project-links">
-              <a href="https://github.com/jhao/pm-universe" target="_blank" rel="noopener">GitHub</a>
-              <a href="https://haoj.in/pm-universe" target="_blank" rel="noopener" data-i18n="projects.pmUniverse.demo">Demo</a>
+            <div class="projects-grid">
+              <article class="project-card">
+                <div class="project-content">
+                  <h3>PM Universe</h3>
+                  <p data-i18n="projects.pmUniverse.description">A constellation of product management resources that visualizes frameworks, case studies, and tactics for easier exploration.</p>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/jhao/pm-universe" target="_blank" rel="noopener">GitHub</a>
+                  <a href="https://haoj.in/pm-universe" target="_blank" rel="noopener" data-i18n="projects.pmUniverse.demo">Demo</a>
+                </div>
+              </article>
+              <article class="project-card">
+                <div class="project-content">
+                  <h3>SignX</h3>
+                  <p data-i18n="projects.signx.description">A minimalist e-signature workflow focused on privacy, speed, and clarity for teams that need agreements without the friction.</p>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/jhao/SignX" target="_blank" rel="noopener">GitHub</a>
+                </div>
+              </article>
+              <article class="project-card">
+                <div class="project-content">
+                  <h3>Local Bookshelf</h3>
+                  <p data-i18n="projects.localBookshelf.description">A personal knowledge library that syncs local reading notes with the cloud while keeping discovery fast and delightful.</p>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/jhao/local-bookshelf" target="_blank" rel="noopener">GitHub</a>
+                </div>
+              </article>
+              <article class="project-card">
+                <div class="project-content">
+                  <h3>Policy Monitor</h3>
+                  <p data-i18n="projects.policyMonitor.description">Automated policy tracking that watches regulatory updates and surfaces alerts tailored to the teams who need to react.</p>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/jhao/policy_monitor" target="_blank" rel="noopener">GitHub</a>
+                </div>
+              </article>
+              <article class="project-card">
+                <div class="project-content">
+                  <h3>Evaluation System</h3>
+                  <p data-i18n="projects.evaluationSystem.description">A scoring and reporting engine that simplifies performance reviews with transparent rubrics and actionable insights.</p>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/jhao/evaluation-system" target="_blank" rel="noopener">GitHub</a>
+                </div>
+              </article>
+              <article class="project-card">
+                <div class="project-content">
+                  <h3>Mermaid Editor</h3>
+                  <p data-i18n="projects.mermaidEditor.description">An interactive editor for crafting Mermaid diagrams with instant previews and sharing-friendly exports.</p>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/jhao/mermaid-editor" target="_blank" rel="noopener">GitHub</a>
+                </div>
+              </article>
             </div>
-          </article>
-          <article class="project-card">
-            <div class="project-content">
-              <h3>SignX</h3>
-              <p data-i18n="projects.signx.description">A minimalist e-signature workflow focused on privacy, speed, and clarity for teams that need agreements without the friction.</p>
+          </div>
+          <div class="projects-column" id="playground">
+            <div class="projects-column-header">
+              <h3 data-i18n="playground.title">Interactive Experiences</h3>
+              <p data-i18n="playground.description">两个纯前端的小宇宙，欢迎点击进入体验它们的节奏与情绪。</p>
             </div>
-            <div class="project-links">
-              <a href="https://github.com/jhao/SignX" target="_blank" rel="noopener">GitHub</a>
+            <div class="playground-grid" role="list">
+              <article class="playground-card" role="listitem">
+                <div class="playground-header">
+                  <span class="playground-icon" aria-hidden="true">🪐</span>
+                  <div class="playground-meta">
+                    <p class="playground-subtitle" data-i18n="playground.cosmic.subtitle">Casual Ping Pong Arcade</p>
+                    <h3 data-i18n="playground.cosmic.title">Cosmic Pong</h3>
+                  </div>
+                </div>
+                <div class="playground-content">
+                  <p data-i18n="playground.cosmic.description">复古的乒乓球玩法与太空视觉结合，节奏逐渐升级，和 AI 对手比拼反应力。</p>
+                  <div class="playground-links">
+                    <a class="playground-link" href="https://haoj.in/Cosmic-Pong/" target="_blank" rel="noopener" data-i18n="playground.cosmic.link">前往体验</a>
+                  </div>
+                </div>
+              </article>
+              <article class="playground-card" role="listitem">
+                <div class="playground-header">
+                  <span class="playground-icon" aria-hidden="true">🌳</span>
+                  <div class="playground-meta">
+                    <p class="playground-subtitle" data-i18n="playground.tree.subtitle">Emotion Journal</p>
+                    <h3 data-i18n="playground.tree.title">树洞之树</h3>
+                  </div>
+                </div>
+                <div class="playground-content">
+                  <p data-i18n="playground.tree.description">挑选一棵树洞，写下心声，与记录对话的界面共同沉淀一份专属于你的私密空间。</p>
+                  <div class="playground-links">
+                    <a class="playground-link" href="https://haoj.in/tree-hole/" target="_blank" rel="noopener" data-i18n="playground.tree.link">走进树洞</a>
+                  </div>
+                </div>
+              </article>
+              <article class="playground-card" role="listitem">
+                <div class="playground-header">
+                  <span class="playground-icon" aria-hidden="true">🏨</span>
+                  <div class="playground-meta">
+                    <p class="playground-subtitle" data-i18n="playground.hotel.subtitle">酒店管理系统</p>
+                    <h3 data-i18n="playground.hotel.title">Hotel Manager</h3>
+                  </div>
+                </div>
+                <div class="playground-content">
+                  <p data-i18n="playground.hotel.description">覆盖预订、入住、账单的酒店管理体验，快速浏览房态与订单。</p>
+                  <div class="playground-links">
+                    <a class="playground-link" href="https://haoj.in/hotelManageSystem/" target="_blank" rel="noopener" data-i18n="playground.hotel.link">前往管理</a>
+                  </div>
+                </div>
+              </article>
+              <article class="playground-card" role="listitem">
+                <div class="playground-header">
+                  <span class="playground-icon" aria-hidden="true">🩺</span>
+                  <div class="playground-meta">
+                    <p class="playground-subtitle" data-i18n="playground.health.subtitle">多维心理与健康问卷集合</p>
+                    <h3 data-i18n="playground.health.title">Mind &amp; Health Survey Hub</h3>
+                  </div>
+                </div>
+                <div class="playground-content">
+                  <p data-i18n="playground.health.description">整合心理与健康维度的问卷，帮助快速生成评估与建议摘要。</p>
+                  <div class="playground-links">
+                    <a class="playground-link" href="https://haoj.in/blood-evaluation/index.html" target="_blank" rel="noopener" data-i18n="playground.health.link1">体验版本一</a>
+                    <a class="playground-link" href="https://haoj.in/blood-evaluation/index2.html" target="_blank" rel="noopener" data-i18n="playground.health.link2">体验版本二</a>
+                  </div>
+                </div>
+              </article>
+              <article class="playground-card" role="listitem">
+                <div class="playground-header">
+                  <span class="playground-icon" aria-hidden="true">📚</span>
+                  <div class="playground-meta">
+                    <p class="playground-subtitle" data-i18n="playground.library.subtitle">学校图书管理</p>
+                    <h3 data-i18n="playground.library.title">Library Hub</h3>
+                  </div>
+                </div>
+                <div class="playground-content">
+                  <p data-i18n="playground.library.description">模拟校园图书流转，支持查询、借阅与库存管理（demo 账号：test/test123）。</p>
+                  <div class="playground-links">
+                    <a class="playground-link" href="http://47.93.33.214:81/" target="_blank" rel="noopener" data-i18n="playground.library.link">进入系统</a>
+                  </div>
+                </div>
+              </article>
+              <article class="playground-card" role="listitem">
+                <div class="playground-header">
+                  <span class="playground-icon" aria-hidden="true">💼</span>
+                  <div class="playground-meta">
+                    <p class="playground-subtitle" data-i18n="playground.finance.subtitle">工程总包财务</p>
+                    <h3 data-i18n="playground.finance.title">Project Finance</h3>
+                  </div>
+                </div>
+                <div class="playground-content">
+                  <p data-i18n="playground.finance.description">面向工程总包的收支流转与合同财务跟踪，聚焦资金效率与透明度。</p>
+                  <div class="playground-links">
+                    <a class="playground-link" href="https://haoj.in/funds-circulation/" target="_blank" rel="noopener" data-i18n="playground.finance.link">查看流转</a>
+                  </div>
+                </div>
+              </article>
             </div>
-          </article>
-          <article class="project-card">
-            <div class="project-content">
-              <h3>Local Bookshelf</h3>
-              <p data-i18n="projects.localBookshelf.description">A personal knowledge library that syncs local reading notes with the cloud while keeping discovery fast and delightful.</p>
+          </div>
+          <div class="projects-column" id="toolbox">
+            <div class="projects-column-header">
+              <h3 data-i18n="toolbox.title">Everyday Utilities &amp; Experiments</h3>
+              <p data-i18n="toolbox.description">一组贴近日常的创意小工具，让数据、灵感与习惯养成更有趣。</p>
             </div>
-            <div class="project-links">
-              <a href="https://github.com/jhao/local-bookshelf" target="_blank" rel="noopener">GitHub</a>
+            <div class="playground-grid" role="list">
+              <article class="playground-card" role="listitem">
+                <div class="playground-header">
+                  <span class="playground-icon" aria-hidden="true">📈</span>
+                  <div class="playground-meta">
+                    <p class="playground-subtitle" data-i18n="toolbox.trend.subtitle">Hot Search Subscriptions</p>
+                    <h3 data-i18n="toolbox.trend.title">Trend Radar</h3>
+                  </div>
+                </div>
+                <div class="playground-content">
+                  <p data-i18n="toolbox.trend.description">订阅多平台热搜雷达，一站式查看热度变化与话题脉络。</p>
+                  <div class="playground-links">
+                    <a class="playground-link" href="https://n.haoj.in" target="_blank" rel="noopener" data-i18n="toolbox.trend.link1">订阅入口 A</a>
+                    <a class="playground-link" href="https://haoj.in/TrendRadar" target="_blank" rel="noopener" data-i18n="toolbox.trend.link2">订阅入口 B</a>
+                  </div>
+                </div>
+              </article>
+              <article class="playground-card" role="listitem">
+                <div class="playground-header">
+                  <span class="playground-icon" aria-hidden="true">🀄️</span>
+                  <div class="playground-meta">
+                    <p class="playground-subtitle" data-i18n="toolbox.naming.subtitle">Chinese Naming Helper</p>
+                    <h3 data-i18n="toolbox.naming.title">Name Studio</h3>
+                  </div>
+                </div>
+                <div class="playground-content">
+                  <p data-i18n="toolbox.naming.description">提供中文起名建议与寓意分析，快速判断名字的风格与气质。</p>
+                  <div class="playground-links">
+                    <a class="playground-link" href="https://haoj.in/named" target="_blank" rel="noopener" data-i18n="toolbox.naming.link">开始起名</a>
+                  </div>
+                </div>
+              </article>
+              <article class="playground-card" role="listitem">
+                <div class="playground-header">
+                  <span class="playground-icon" aria-hidden="true">🔮</span>
+                  <div class="playground-meta">
+                    <p class="playground-subtitle" data-i18n="toolbox.divination.subtitle">Online I Ching</p>
+                    <h3 data-i18n="toolbox.divination.title">Zen Divination</h3>
+                  </div>
+                </div>
+                <div class="playground-content">
+                  <p data-i18n="toolbox.divination.description">六爻卜算工具，提供清晰的起卦流程与结果解读。</p>
+                  <div class="playground-links">
+                    <a class="playground-link" href="https://haoj.in/ZenDivination" target="_blank" rel="noopener" data-i18n="toolbox.divination.link">开始卜算</a>
+                  </div>
+                </div>
+              </article>
+              <article class="playground-card" role="listitem">
+                <div class="playground-header">
+                  <span class="playground-icon" aria-hidden="true">⏱️</span>
+                  <div class="playground-meta">
+                    <p class="playground-subtitle" data-i18n="toolbox.plank.subtitle">Plank Training</p>
+                    <h3 data-i18n="toolbox.plank.title">Plank Master Pro</h3>
+                  </div>
+                </div>
+                <div class="playground-content">
+                  <p data-i18n="toolbox.plank.description">记录平板支撑训练时长与节奏，轻松保持锻炼习惯。</p>
+                  <div class="playground-links">
+                    <a class="playground-link" href="https://haoj.in/plank-master-pro" target="_blank" rel="noopener" data-i18n="toolbox.plank.link">开启计时</a>
+                  </div>
+                </div>
+              </article>
             </div>
-          </article>
-          <article class="project-card">
-            <div class="project-content">
-              <h3>Policy Monitor</h3>
-              <p data-i18n="projects.policyMonitor.description">Automated policy tracking that watches regulatory updates and surfaces alerts tailored to the teams who need to react.</p>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/jhao/policy_monitor" target="_blank" rel="noopener">GitHub</a>
-            </div>
-          </article>
-          <article class="project-card">
-            <div class="project-content">
-              <h3>Evaluation System</h3>
-              <p data-i18n="projects.evaluationSystem.description">A scoring and reporting engine that simplifies performance reviews with transparent rubrics and actionable insights.</p>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/jhao/evaluation-system" target="_blank" rel="noopener">GitHub</a>
-            </div>
-          </article>
-          <article class="project-card">
-            <div class="project-content">
-              <h3>Mermaid Editor</h3>
-              <p data-i18n="projects.mermaidEditor.description">An interactive editor for crafting Mermaid diagrams with instant previews and sharing-friendly exports.</p>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/jhao/mermaid-editor" target="_blank" rel="noopener">GitHub</a>
-            </div>
-          </article>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="playground" id="playground">
-      <div class="playground-wrapper">
+    <section class="publications" id="publications">
+      <div class="publications-wrapper">
         <div class="section-header">
-          <p class="eyebrow" data-i18n="playground.eyebrow">Playground</p>
-          <h2 data-i18n="playground.title">Interactive Experiences</h2>
-          <p class="description" data-i18n="playground.description">两个纯前端的小宇宙，欢迎点击进入体验它们的节奏与情绪。</p>
+          <p class="eyebrow">Publications</p>
+          <h2>著作</h2>
+          <p class="description">聚焦模型上下文协议与跨模型集成的工程实践。</p>
         </div>
-        <div class="playground-grid" role="list">
-          <article class="playground-card" role="listitem">
-            <div class="playground-header">
-              <span class="playground-icon" aria-hidden="true">🪐</span>
-              <div class="playground-meta">
-                <p class="playground-subtitle" data-i18n="playground.cosmic.subtitle">Casual Ping Pong Arcade</p>
-                <h3 data-i18n="playground.cosmic.title">Cosmic Pong</h3>
-              </div>
-            </div>
-            <div class="playground-content">
-              <p data-i18n="playground.cosmic.description">复古的乒乓球玩法与太空视觉结合，节奏逐渐升级，和 AI 对手比拼反应力。</p>
-              <a class="playground-link" href="https://haoj.in/Cosmic-Pong/" target="_blank" rel="noopener" data-i18n="playground.cosmic.link">前往体验</a>
-            </div>
-          </article>
-          <article class="playground-card" role="listitem">
-            <div class="playground-header">
-              <span class="playground-icon" aria-hidden="true">🌳</span>
-              <div class="playground-meta">
-                <p class="playground-subtitle" data-i18n="playground.tree.subtitle">Emotion Journal</p>
-                <h3 data-i18n="playground.tree.title">树洞之树</h3>
-              </div>
-            </div>
-            <div class="playground-content">
-              <p data-i18n="playground.tree.description">挑选一棵树洞，写下心声，与记录对话的界面共同沉淀一份专属于你的私密空间。</p>
-              <a class="playground-link" href="https://haoj.in/tree-hole/" target="_blank" rel="noopener" data-i18n="playground.tree.link">走进树洞</a>
-            </div>
-          </article>
-          <article class="playground-card" role="listitem">
-            <div class="playground-header">
-              <span class="playground-icon" aria-hidden="true">🏨</span>
-              <div class="playground-meta">
-                <p class="playground-subtitle" data-i18n="playground.hotel.subtitle">酒店管理系统</p>
-                <h3 data-i18n="playground.hotel.title">Hotel Manager</h3>
-              </div>
-            </div>
-            <div class="playground-content">
-              <p data-i18n="playground.hotel.description">覆盖预订、入住、账单的酒店管理体验，快速浏览房态与订单。</p>
-              <a class="playground-link" href="https://haoj.in/hotelManageSystem/" target="_blank" rel="noopener" data-i18n="playground.hotel.link">前往管理</a>
-            </div>
-          </article>
-          <article class="playground-card" role="listitem">
-            <div class="playground-header">
-              <span class="playground-icon" aria-hidden="true">🩺</span>
-              <div class="playground-meta">
-                <p class="playground-subtitle" data-i18n="playground.health.subtitle">多维心理与健康问卷集合</p>
-                <h3 data-i18n="playground.health.title">Mind &amp; Health Survey Hub</h3>
-              </div>
-            </div>
-            <div class="playground-content">
-              <p data-i18n="playground.health.description">整合心理与健康维度的问卷，帮助快速生成评估与建议摘要。</p>
-              <a class="playground-link" href="https://haoj.in/blood-evaluation/index.html" target="_blank" rel="noopener" data-i18n="playground.health.link1">体验版本一</a>
-              <a class="playground-link" href="https://haoj.in/blood-evaluation/index2.html" target="_blank" rel="noopener" data-i18n="playground.health.link2">体验版本二</a>
-            </div>
-          </article>
-          <article class="playground-card" role="listitem">
-            <div class="playground-header">
-              <span class="playground-icon" aria-hidden="true">📚</span>
-              <div class="playground-meta">
-                <p class="playground-subtitle" data-i18n="playground.library.subtitle">学校图书管理</p>
-                <h3 data-i18n="playground.library.title">Library Hub</h3>
-              </div>
-            </div>
-            <div class="playground-content">
-              <p data-i18n="playground.library.description">模拟校园图书流转，支持查询、借阅与库存管理（demo 账号：test/test123）。</p>
-              <a class="playground-link" href="http://47.93.33.214:81/" target="_blank" rel="noopener" data-i18n="playground.library.link">进入系统</a>
-            </div>
-          </article>
-          <article class="playground-card" role="listitem">
-            <div class="playground-header">
-              <span class="playground-icon" aria-hidden="true">💼</span>
-              <div class="playground-meta">
-                <p class="playground-subtitle" data-i18n="playground.finance.subtitle">工程总包财务</p>
-                <h3 data-i18n="playground.finance.title">Project Finance</h3>
-              </div>
-            </div>
-            <div class="playground-content">
-              <p data-i18n="playground.finance.description">面向工程总包的收支流转与合同财务跟踪，聚焦资金效率与透明度。</p>
-              <a class="playground-link" href="https://haoj.in/funds-circulation/" target="_blank" rel="noopener" data-i18n="playground.finance.link">查看流转</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="playground" id="toolbox">
-      <div class="playground-wrapper">
-        <div class="section-header">
-          <p class="eyebrow" data-i18n="toolbox.eyebrow">Toolbox</p>
-          <h2 data-i18n="toolbox.title">Everyday Utilities &amp; Experiments</h2>
-          <p class="description" data-i18n="toolbox.description">一组贴近日常的创意小工具，让数据、灵感与习惯养成更有趣。</p>
-        </div>
-        <div class="playground-grid" role="list">
-          <article class="playground-card" role="listitem">
-            <div class="playground-header">
-              <span class="playground-icon" aria-hidden="true">📈</span>
-              <div class="playground-meta">
-                <p class="playground-subtitle" data-i18n="toolbox.trend.subtitle">Hot Search Subscriptions</p>
-                <h3 data-i18n="toolbox.trend.title">Trend Radar</h3>
-              </div>
-            </div>
-            <div class="playground-content">
-              <p data-i18n="toolbox.trend.description">订阅多平台热搜雷达，一站式查看热度变化与话题脉络。</p>
-              <a class="playground-link" href="https://n.haoj.in" target="_blank" rel="noopener" data-i18n="toolbox.trend.link1">订阅入口 A</a>
-              <a class="playground-link" href="https://haoj.in/TrendRadar" target="_blank" rel="noopener" data-i18n="toolbox.trend.link2">订阅入口 B</a>
-            </div>
-          </article>
-          <article class="playground-card" role="listitem">
-            <div class="playground-header">
-              <span class="playground-icon" aria-hidden="true">🀄️</span>
-              <div class="playground-meta">
-                <p class="playground-subtitle" data-i18n="toolbox.naming.subtitle">Chinese Naming Helper</p>
-                <h3 data-i18n="toolbox.naming.title">Name Studio</h3>
-              </div>
-            </div>
-            <div class="playground-content">
-              <p data-i18n="toolbox.naming.description">提供中文起名建议与寓意分析，快速判断名字的风格与气质。</p>
-              <a class="playground-link" href="https://haoj.in/named" target="_blank" rel="noopener" data-i18n="toolbox.naming.link">开始起名</a>
-            </div>
-          </article>
-          <article class="playground-card" role="listitem">
-            <div class="playground-header">
-              <span class="playground-icon" aria-hidden="true">🔮</span>
-              <div class="playground-meta">
-                <p class="playground-subtitle" data-i18n="toolbox.divination.subtitle">Online I Ching</p>
-                <h3 data-i18n="toolbox.divination.title">Zen Divination</h3>
-              </div>
-            </div>
-            <div class="playground-content">
-              <p data-i18n="toolbox.divination.description">六爻卜算工具，提供清晰的起卦流程与结果解读。</p>
-              <a class="playground-link" href="https://haoj.in/ZenDivination" target="_blank" rel="noopener" data-i18n="toolbox.divination.link">开始卜算</a>
-            </div>
-          </article>
-          <article class="playground-card" role="listitem">
-            <div class="playground-header">
-              <span class="playground-icon" aria-hidden="true">⏱️</span>
-              <div class="playground-meta">
-                <p class="playground-subtitle" data-i18n="toolbox.plank.subtitle">Plank Training</p>
-                <h3 data-i18n="toolbox.plank.title">Plank Master Pro</h3>
-              </div>
-            </div>
-            <div class="playground-content">
-              <p data-i18n="toolbox.plank.description">记录平板支撑训练时长与节奏，轻松保持锻炼习惯。</p>
-              <a class="playground-link" href="https://haoj.in/plank-master-pro" target="_blank" rel="noopener" data-i18n="toolbox.plank.link">开启计时</a>
-            </div>
-          </article>
-        </div>
+        <article class="publication-card">
+          <div class="publication-content">
+            <h3>《MCP工程实践 AI模型上下文协议与跨模型集成全攻略》</h3>
+            <p>ISBN 9787122494450</p>
+            <p>
+              《MCP工程实践:AI模型上下文协议与跨模型集成全攻略》是一本聚焦AI时代模型交互瓶颈与跨系统集成难题的专业指南，它系统地解析了模型上下文协议(MCP)的核心原理、技术架构与工程落地方法。本书开篇直击AI模型的“上下文鸿沟”——浅层记忆局限、推理不透明性、位置偏置及专业领域盲区等问题，阐明MCP作为通用标准的诞生背景与核心价值；随后深入解析 MCP 的架构三元组(Host/Client/Server)、双向通信机制与沙箱安全模型，揭示其如何通过资源（感知数据库）、工具（操作手臂）、提示（任务剧本）三大能力，构建“耳聪目明且安全可控”的智能交互体系。书中不仅对比了MCP与传统方案（如OpenAI函数调用、插件机制）的优劣，还通过开发环境配置、服务器/客户端构建、工具箱案例（如纳米AI、字节Trae等）的完整流程演示，手把手指导读者从零搭建到可落地的跨模型集成系统。最后，针对安全风险（权限控制、数据加密、模型幻觉），提供了从开发阶段前置设计到运行时审计的全链路实践建议。
+            </p>
+          </div>
+          <div class="publication-actions">
+            <a class="playground-link" href="https://item.jd.com/10209158553180.html" target="_blank" rel="noopener">前往京东购买</a>
+          </div>
+        </article>
       </div>
     </section>
   </main>
