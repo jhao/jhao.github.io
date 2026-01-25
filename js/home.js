@@ -55,12 +55,16 @@
       'nav.home': 'Home',
       'nav.about': 'About',
       'nav.projects': 'Works',
+      'nav.publications': 'Publications',
       'nav.github': 'GitHub',
       'nav.contact': 'Contact',
       'nav.toggle': 'Toggle navigation',
       'language.label': 'Select language',
       'language.english': 'EN',
       'language.chinese': '中文',
+      'theme.toggle': 'Toggle theme',
+      'theme.toggle.light': 'Light',
+      'theme.toggle.dark': 'Dark',
       'hero.tagline': 'Exploring ideas in code, design, and data',
       'hero.title': 'Digital & Intelligent Panorama Solutions',
       'hero.lead':
@@ -92,6 +96,9 @@
       'projects.title': 'Explore My Recent Work',
       'projects.description':
         'A snapshot of experiments, tools, and platforms I’m building to make product thinking, automation, and storytelling more tangible.',
+      'projects.column.products': 'Platforms & Products',
+      'projects.column.products.description':
+        'A curated lineup of core platforms and system capabilities, from workflow engines to visual experiences.',
       'projects.pmUniverse.description':
         'A constellation of product management resources that visualizes frameworks, case studies, and tactics for easier exploration.',
       'projects.pmUniverse.demo': 'Demo',
@@ -159,18 +166,22 @@
       'toolbox.plank.title': 'Plank Master Pro',
       'toolbox.plank.description': 'Track plank sessions with timing and streak-focused records.',
       'toolbox.plank.link': 'Start timer',
-      'footer.note': '© {{year}} Hao Jin. Crafted with curiosity and stardust.'
+      'footer.note': '© {{year}} Hao Jin. Crafted with curiosity, code, and constellations.'
     },
     zh: {
       'nav.home': '首页',
       'nav.about': '关于',
       'nav.projects': '作品',
+      'nav.publications': '著作',
       'nav.github': 'GitHub',
       'nav.contact': '联系',
       'nav.toggle': '切换导航',
       'language.label': '选择语言',
       'language.english': 'EN',
       'language.chinese': '中文',
+      'theme.toggle': '切换配色模式',
+      'theme.toggle.light': '明亮',
+      'theme.toggle.dark': '深色',
       'hero.tagline': '在代码、设计与数据中探索创意',
       'hero.title': '数字与智能化全景解决方案',
       'hero.lead': '沿着数字与智能化全景路径前行，探索企业业务赋能所需的架构实践、AI 应用与产品落地。',
@@ -199,6 +210,8 @@
       'projects.eyebrow': '项目',
       'projects.title': '探索我的近期作品',
       'projects.description': '这些作品凝聚了我对产品思考、自动化与叙事表达的探索。',
+      'projects.column.products': '平台与产品',
+      'projects.column.products.description': '核心产品与系统能力的集锦，从流程型平台到可视化体验。',
       'projects.pmUniverse.description':
         '一个汇聚产品管理框架、案例与策略的资源星图，帮助你更轻松地检索知识。',
       'projects.pmUniverse.demo': '在线体验',
@@ -209,7 +222,7 @@
       'projects.evaluationSystem.description': '一套透明的评分与报告引擎，用清晰的量表和洞察简化绩效评估。',
       'projects.mermaidEditor.description': '交互式 Mermaid 绘图编辑器，支持即时预览与友好的导出分享体验。',
       'playground.eyebrow': '互动场',
-      'playground.title': '互动体验',
+      'playground.title': '一些应用与小系统',
       'playground.description': '两个纯前端的小宇宙，欢迎点击进入体验它们的节奏与情绪。',
       'playground.cosmic.subtitle': '休闲乒乓桌球',
       'playground.cosmic.title': 'Cosmic Pong',
@@ -256,7 +269,7 @@
       'toolbox.plank.title': 'Plank Master Pro',
       'toolbox.plank.description': '记录平板支撑训练时长与节奏，轻松保持锻炼习惯。',
       'toolbox.plank.link': '开启计时',
-      'footer.note': '© {{year}} Hao Jin。以好奇与星尘打造。'
+      'footer.note': '© {{year}} Hao Jin。以好奇、代码与星图点亮。'
     }
   };
 
@@ -271,7 +284,9 @@
   const translatableElements = document.querySelectorAll('[data-i18n]');
   const attributeElements = document.querySelectorAll('[data-i18n-attr]');
   const languageButtons = document.querySelectorAll('[data-set-language]');
+  const themeToggle = document.querySelector('[data-theme-toggle]');
   const htmlElement = document.documentElement;
+  const bodyElement = document.body;
 
   const formatTranslation = (value) =>
     value.replace(/{{(\w+)}}/g, (match, token) => {
@@ -296,9 +311,12 @@
     });
   };
 
+  let activeLanguage = fallbackLanguage;
+
   const applyLanguage = (language, { persist = true } = {}) => {
     const targetLanguage = supportedLanguages.includes(language) ? language : fallbackLanguage;
     const htmlLanguageCode = htmlLangMap[targetLanguage] || targetLanguage;
+    activeLanguage = targetLanguage;
     htmlElement.setAttribute('lang', htmlLanguageCode);
 
     translatableElements.forEach((element) => {
@@ -341,6 +359,7 @@
     });
 
     updateActiveButtons(targetLanguage);
+    updateThemeLabel();
     refreshYear();
 
     if (persist) {
@@ -370,6 +389,65 @@
     return fallbackLanguage;
   };
 
+  const themeStorageKey = 'preferred-theme';
+  const themeClass = 'theme-light';
+  const supportedThemes = ['light', 'dark'];
+  let activeTheme = 'dark';
+
+  const resolveInitialTheme = () => {
+    try {
+      const storedTheme = window.localStorage.getItem(themeStorageKey);
+      if (storedTheme && supportedThemes.includes(storedTheme)) {
+        return storedTheme;
+      }
+    } catch (error) {
+      /* ignore retrieval errors */
+    }
+
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+      return 'light';
+    }
+
+    return 'dark';
+  };
+
+  const updateThemeLabel = () => {
+    if (!themeToggle) {
+      return;
+    }
+
+    const labelKey = activeTheme === 'light' ? 'theme.toggle.dark' : 'theme.toggle.light';
+    const label = translations[activeLanguage][labelKey] || labelKey;
+    const labelElement = themeToggle.querySelector('[data-theme-label]');
+    if (labelElement) {
+      labelElement.textContent = label;
+    } else {
+      themeToggle.textContent = label;
+    }
+
+    themeToggle.setAttribute('aria-pressed', activeTheme === 'light' ? 'true' : 'false');
+  };
+
+  const applyTheme = (theme, { persist = true } = {}) => {
+    const resolvedTheme = supportedThemes.includes(theme) ? theme : 'dark';
+    activeTheme = resolvedTheme;
+
+    if (bodyElement) {
+      bodyElement.classList.toggle(themeClass, resolvedTheme === 'light');
+      bodyElement.dataset.theme = resolvedTheme;
+    }
+
+    updateThemeLabel();
+
+    if (persist) {
+      try {
+        window.localStorage.setItem(themeStorageKey, resolvedTheme);
+      } catch (error) {
+        /* ignore persistence errors */
+      }
+    }
+  };
+
   languageButtons.forEach((button) => {
     button.addEventListener('click', () => {
       const selectedLanguage = button.dataset.setLanguage;
@@ -377,5 +455,13 @@
     });
   });
 
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      const nextTheme = activeTheme === 'light' ? 'dark' : 'light';
+      applyTheme(nextTheme);
+    });
+  }
+
+  applyTheme(resolveInitialTheme(), { persist: false });
   applyLanguage(resolveInitialLanguage(), { persist: false });
 })();
