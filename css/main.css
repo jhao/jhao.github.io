@@ -1475,12 +1475,6 @@ body.home-page.theme-light .home-footer {
   color: rgba(39, 52, 98, 0.6);
 }
 
-body.home-page.theme-light.nav-enhanced .home-nav {
-  background: rgba(255, 255, 255, 0.96);
-  border-color: rgba(140, 166, 235, 0.34);
-  box-shadow: 0 16px 30px rgba(40, 58, 112, 0.14);
-}
-
 body.home-page.theme-light.nav-enhanced .home-nav a {
   color: #263a78;
   border-bottom-color: rgba(140, 166, 235, 0.26);
@@ -1586,12 +1580,6 @@ body.home-page.theme-light.nav-enhanced .home-nav a:focus {
   body.nav-enhanced .home-nav.is-open {
     padding: 12px clamp(18px, 8vw, 80px) 20px;
     max-height: 320px;
-  }
-
-  body.home-page.theme-light.nav-enhanced .home-nav {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(244, 249, 255, 0.96) 100%);
-    border-color: rgba(134, 165, 238, 0.34);
-    box-shadow: 0 18px 34px rgba(40, 58, 112, 0.16);
   }
 
   body.home-page.theme-light.nav-enhanced .home-nav a {
